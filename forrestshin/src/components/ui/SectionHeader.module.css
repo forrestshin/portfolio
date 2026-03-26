@@ -1,0 +1,49 @@
+.header {
+  margin-bottom: 56px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.label::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 0.5px;
+  background: var(--mist);
+  vertical-align: middle;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* Light variant — for dark backgrounds */
+.light .label  { color: rgba(176, 186, 207, 0.7); }
+.light .label::after { background: rgba(176, 186, 207, 0.3); }
+.light .title  { color: var(--text-on-dark); }
+.light .subtitle { color: rgba(240, 237, 230, 0.6); }

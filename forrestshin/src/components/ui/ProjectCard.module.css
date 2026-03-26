@@ -1,0 +1,119 @@
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Type accent bar */
+.accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.technical { background: linear-gradient(90deg, var(--navy), var(--steel)); }
+.creative  { background: linear-gradient(90deg, var(--slate), var(--mist)); }
+.mixed     { background: linear-gradient(90deg, var(--accent-blue), var(--frost)); }
+
+.body {
+  padding-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.selectedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--accent-blue);
+  color: var(--azure);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.selectedDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--frost);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--frost);
+  color: var(--slate);
+  border: 0.5px solid var(--border);
+}
+
+.tag.creative {
+  background: var(--lavender);
+  color: var(--slate);
+}
+
+.tag.mixed {
+  background: var(--azure);
+  color: var(--accent-blue);
+}
+
+.arrow {
+  font-size: 14px;
+  color: var(--mist);
+  transition: color var(--dur-fast) ease;
+}
+
+.card:hover .arrow {
+  color: var(--navy);
+}

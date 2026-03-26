@@ -1,0 +1,93 @@
+.resumeLayout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 64px;
+  align-items: start;
+}
+
+.block { margin-bottom: 56px; }
+
+.blockLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel);
+  display: block;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.entries { display: flex; flex-direction: column; gap: 0; }
+
+.entry {
+  padding: 24px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.entryHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.entryRole {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.entryCompany {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--steel);
+}
+
+.entryPeriod {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 5px;
+}
+
+.entryDesc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.sidebar { position: sticky; top: 120px; }
+
+.downloadCard {
+  background: var(--grad-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.downloadDesc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .resumeLayout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}

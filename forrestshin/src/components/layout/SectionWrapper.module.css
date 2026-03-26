@@ -1,0 +1,74 @@
+.section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 48px;
+}
+
+.noPad .inner {
+  padding: 0;
+}
+
+/* Left-edge gradient border — replaces solid dividers */
+.leftBorder {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 3px;
+  background: var(--grad-section-border);
+  border-radius: 0 2px 2px 0;
+  pointer-events: none;
+}
+
+/* ── Gradient variants ── */
+
+/* Default: floats Paper → Lavender → Azure → Paper */
+.varDefault {
+  background: var(--grad-section);
+}
+
+/* Light: clean white surface */
+.varLight {
+  background: linear-gradient(180deg, var(--white) 0%, var(--paper) 100%);
+}
+
+/* Dark: matches footer/hero depth */
+.varDark {
+  background: var(--grad-hero);
+}
+.varDark .leftBorder {
+  background: linear-gradient(90deg, rgba(176,186,207,0.15) 0%, transparent 100%);
+}
+
+/* Creative: lavender-forward for creative pages */
+.varCreative {
+  background: linear-gradient(180deg, var(--lavender) 0%, var(--frost) 40%, var(--azure) 70%, var(--lavender) 100%);
+}
+
+/* Transition: used between dark hero and light body */
+.varTransition {
+  background: var(--grad-transition);
+  height: 120px;
+  padding: 0;
+}
+.varTransition .inner {
+  padding: 0;
+  max-width: none;
+}
+
+/* Azure: cool-tinted section */
+.varAzure {
+  background: linear-gradient(180deg, var(--azure) 0%, var(--frost) 50%, var(--paper) 100%);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 64px 24px;
+  }
+}

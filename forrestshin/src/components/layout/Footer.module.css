@@ -1,0 +1,97 @@
+.footer {
+  background: var(--grad-footer);
+  border-top: 0.5px solid rgba(176, 186, 207, 0.1);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 48px 32px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 0.5px solid rgba(176, 186, 207, 0.1);
+  margin-bottom: 28px;
+}
+
+.brand {}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text-on-dark);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.logo em {
+  font-style: italic;
+  color: var(--mist);
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(176, 186, 207, 0.55);
+  letter-spacing: 0.04em;
+}
+
+.cols {
+  display: flex;
+  gap: 64px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(176, 186, 207, 0.4);
+  margin-bottom: 4px;
+}
+
+.footerLink {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(240, 237, 230, 0.5);
+  transition: color var(--dur-fast) ease;
+}
+
+.footerLink:hover {
+  color: var(--text-on-dark);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy,
+.built {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(176, 186, 207, 0.3);
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 48px 24px 28px; }
+  .top { flex-direction: column; gap: 32px; }
+  .cols { gap: 32px; }
+}

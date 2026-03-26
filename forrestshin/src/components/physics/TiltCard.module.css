@@ -1,0 +1,34 @@
+.card {
+  background: var(--grad-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-selection);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.card:hover::before {
+  opacity: 0.5;
+}
+
+.selected {
+  border: 2px solid var(--accent-blue);
+  background: var(--sel-bg, var(--azure));
+}
+
+.selected::before {
+  opacity: 1;
+}
