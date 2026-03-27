@@ -12,7 +12,7 @@ const INTERESTS = [
   { label: 'Cooking', description: 'Korean home cooking and fermentation. Food as cultural memory.' },
   { label: 'Reading', description: 'Design theory, philosophy of technology, and the occasional novel.' },
   { label: 'Music', description: 'Ambient, jazz, and anything with texture. Learning piano slowly.' },
-  { label: 'Travel', description: 'Interested in cities — how they're planned, how they feel on foot.' },
+  { label: 'Travel', description: "Interested in cities — how they're planned, how they feel on foot." },
 ]
 
 export default function Outside() {
